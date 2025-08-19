@@ -1,0 +1,436 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme .container {
+    background: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+}
+
+body.dark-theme h1 {
+    color: #ffffff;
+}
+
+.command-section {
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.command-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.command-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.command-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Disabled buttons */
+.command-button.disabled {
+    background-color: #cccccc;
+    color: #666666;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.command-button.disabled:hover {
+    background-color: #cccccc;
+    color: #666666;
+    transform: none;
+    box-shadow: none;
+}
+
+.response-section {
+    margin-top: 20px;
+}
+
+pre {
+    background: #1e1e1e;
+    color: #ffffff;
+    padding: 15px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.exit-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4d4d;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    transition: background-color 0.3s;
+}
+
+.exit-button:hover {
+    background-color: #cc0000;
+}
+
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination-buttons button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.pagination-buttons button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pagination-buttons button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    color: #121212;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body.dark-theme .theme-toggle {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.clickable-individual {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.clickable-individual:hover {
+    color: #0056b3;
+}
+
+.log-section {
+    margin-top: 20px;
+    background: #1e1e1e;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.log-output pre {
+    margin: 0;
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.status-off {
+    color: red;
+    margin-left: 10px;
+}
+
+.status-on {
+    color: green;
+    margin-left: 10px;
+}
+
+.status-loading {
+    color: orange;
+    margin-left: 10px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+    height: 20px;
+}
+
+#progress-bar-fill {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50;
+    transition: width 0.5s;
+}
+
+.hidden {
+    display: none;
+}
+
+/* AI Control */
+.ai-control {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* AI Toggle Button */
+.ai-toggle {
+    background-color: #ff4d4d; /* Red for OFF state */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ai-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ai-toggle:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ai-toggle.status-on {
+    background-color: #4caf50; /* Green for ON state */
+}
+
+/* Ensure readability in dark theme */
+body.dark-theme .ai-toggle {
+    color: white;
+}
+
+/* Response Window */
+.response-window {
+    position: relative;
+    margin-top: 20px;
+    background: #1e1e1e;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.response-header {
+    background: #333333;
+    color: #ffffff;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444444;
+}
+
+.response-header button {
+    background: #ff4d4d;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.response-header button:hover {
+    background: #cc0000;
+}
+
+.response-content {
+    padding: 10px;
+    overflow-y: auto;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.response-content p {
+    margin: 0;
+}
+
+.response-content.success {
+    color: #4caf50; /* Green for success */
+}
+
+.response-content.error {
+    color: #ff4d4d; /* Red for errors */
+}
+
+.response-content.warning {
+    color: #ffcc00; /* Yellow for warnings */
+}
+
+/* File Selector */
+.file-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-selector input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    cursor: not-allowed;
+}
+
+.file-selector button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.file-selector button:hover {
+    background-color: #0056b3;
+}
