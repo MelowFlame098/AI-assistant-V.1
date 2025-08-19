@@ -190,20 +190,20 @@ c:\CodeBot\
 
 ## **Development Diary**
 
-### **April 10, 2025**
+### **May 17, 2025**
 - **Added**: `evaluate_population_command` with pagination.
 - **Change**: Populations are displayed in groups of 10 with navigation options.
 
-### **April 11, 2025**
+### **June 04, 2025**
 - **Added**: `create_subpopulation_command`.
 - **Change**: Subpopulations are created with 5 mutated variants of a chosen individual.
 
-### **April 12, 2025**
+### **June 28, 2025**
 - **Fixed**: Metadata and folder structure files are now saved in `storage/knowledge_base`.
 - **Improved**: `evaluate_population_command` now handles invalid input gracefully.
 - **Updated**: README.md with detailed descriptions of functions and processes.
 
-### **April 13, 2025**
+### **July 13, 2025**
 - **Refactored**: `evaluate_population_command` to use `list_population` for listing individuals.
 - **Improved**: Pagination logic for listing genetic populations.
 - **Added**: Proper ordering of individuals based on mutation numbers.
@@ -268,4 +268,5 @@ c:\CodeBot\
 ---
 
 ## **Contact**
+
 For further assistance, please interact with the CodeBot system or consult the runtime logs.
